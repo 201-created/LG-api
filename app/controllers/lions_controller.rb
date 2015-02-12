@@ -6,7 +6,7 @@ class LionsController < ApiController
   end
 
   def index
-    @lions = Lion.where(search_params)
+    @lions = Lion.search(search_params)
 
     render json: LionsSerializer.new(@lions)
   end

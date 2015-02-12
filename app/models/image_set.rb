@@ -20,6 +20,10 @@ class ImageSet < ActiveRecord::Base
 
   validate :main_image_in_image_set
 
+  def age=(val)
+    @age = val.to_i
+  end
+
   private
 
   def main_image_in_image_set

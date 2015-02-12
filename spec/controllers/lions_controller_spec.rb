@@ -14,8 +14,8 @@ RSpec.describe LionsController, :type => :controller do
   end
 
   describe '#index' do
-    let(:lion1) { Fabricate(:lion, age: '24', gender:'male')}
-    let(:lion2) { Fabricate(:lion, age: '25', gender:'female')}
+    let(:lion1) { Fabricate(:lion, age: 24, gender:'male')}
+    let(:lion2) { Fabricate(:lion, age: 25, gender:'female')}
     let!(:lions) { [lion1, lion2] }
     let(:request) { ->{ get :index, params } }
 
