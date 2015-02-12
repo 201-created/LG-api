@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150206195604) do
+ActiveRecord::Schema.define(version: 20150212134953) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -83,10 +83,10 @@ ActiveRecord::Schema.define(version: 20150206195604) do
     t.decimal  "longitude",                 precision: 10, scale: 6
     t.datetime "photo_date"
     t.string   "gender"
-    t.string   "age"
     t.boolean  "is_primary",                                         default: false
     t.datetime "created_at",                                                         null: false
     t.datetime "updated_at",                                                         null: false
+    t.integer  "age"
   end
 
   create_table "images", force: :cascade do |t|
@@ -102,10 +102,10 @@ ActiveRecord::Schema.define(version: 20150206195604) do
     t.string   "name",                 null: false
     t.integer  "organization_id"
     t.string   "gender"
-    t.string   "age"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
     t.integer  "primary_image_set_id"
+    t.datetime "age"
   end
 
   add_index "lions", ["name"], name: "index_lions_on_name", unique: true, using: :btree
